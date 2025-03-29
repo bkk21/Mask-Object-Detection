@@ -4,14 +4,14 @@ yolov5를 활용한 마스크 인식 시스템 구현
 ## 가장 좋은 모델 
 batch size 16, epochs 300으로 학습 진행
 ### Train Result
-![alt text](image-2.png)
+![alt text](./image/image-2.png)
 1. Loss : 값이 모두 감소하고 있는 것을 보아 학습이 잘 진행되고 있음을 알 수 있습니다. 
 2. 정밀도 : 초반에는 변동이 크지만, 0.9에 가까운 값으로 모델이 클래스를 잘 구분하고 있음을 알 수 있습니다.
 3. 재현율 : 0.8에 가까운 값으로 모델이 클래스를 잘 구분하고 있음을 알 수 있습니다. 
 4. mAP_0.5 : 0.8 이상의 값으로 모델이 전반적으로 높은 예측 성능을 가지고 있음을 알 수 있습니다.
 
 ### PR Curve
-![alt text](image-3.png)
+![alt text](./image/image-3.png)
 - mAP@0.5의 정확한 수치를 확인하기 위해 그래프를 출력합니다.
 - 그래프의 라벨을 통해 mAP@0.5는 0.860임을 알 수 있습니다.
 - 모델의 성능이 0.86으로 높은 수치를 갖고 있어 2번 모델의 성능이 좋다고 판단할 수 있습니다.
@@ -60,7 +60,7 @@ batch size 16, epochs 300으로 학습 진행
 ### 1인 사진
 |원본사진|결과|
 |---|---|
-|![alt text](image-13.png)|![alt text](image-14.png)|
+|![alt text](./image/image-13.png)|![alt text](./image/image-14.png)|
 - 위 사진은 1명이 마스크를 쓰고 있는 사진입니다. 
 - 결과는 얼굴에 박스를 잘 그렸고, 0, good mask로 마스크를 잘 쓰고 있는 것으로 예측하였습니다.
 - 위 케이스는 잘 예측한 케이스입니다.
@@ -70,7 +70,7 @@ batch size 16, epochs 300으로 학습 진행
 ### 2인 사진
 |원본사진|결과|
 |---|---|
-|![alt text](image-15.png)|![alt text](image-17.png)|
+|![alt text](./image/image-15.png)|![alt text](./image/image-17.png)|
 - 원본 사진은 2명이 마스크를 쓰고 있는 사진입니다. 
 - 결과는 두 명 모두 얼굴에 박스를 잘 그렸고, 0, good mask로 마스크를 잘 쓰고 있는 것으로 예측하였습니다.
 - 이번 케이스는 잘 예측한 케이스입니다.
@@ -81,7 +81,7 @@ batch size 16, epochs 300으로 학습 진행
 ### N인 사진
 |원본사진|결과|
 |---|---|
-|![alt text](image-18.png)|![alt text](image-19.png)|
+|![alt text](./image/image-18.png)|![alt text](./image/image-19.png)|
 - 원본 사진은 14명이 있는 사진입니다.
 - 박스를 여러 개를 그리기는 했지만, 결과들이 겹쳐서 제대로 확인 할 수 없었습니다.
 
@@ -94,7 +94,7 @@ batch size 16, epochs 300으로 학습 진행
 ## 결과 분석 및 개선 방향 제시
 
 ### Confusion Matrix
-![alt text](image-20.png)
+![alt text](./image/image-20.png)
 1. confusion_matrix 구성 요소
 - True Labels : 실제 클래스 레이블
 - Predicted Labels : 모델이 예측한 클래스 레이블
